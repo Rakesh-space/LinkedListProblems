@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinkedListProblems
 {
-    class UC7SearchOperation
+    class UC8InsertAfter
     {
-
         internal Node head;
 
         internal void insert(int data) //inserting new integer data into linklist
@@ -29,18 +28,18 @@ namespace LinkedListProblems
             }
             Console.WriteLine("\n {0} Data is inserted into linked list.", new_node.data);
         }
-
-        internal Node Search(int data) //Searching opration performed here
+        internal void insertAfter(Node prevNode, int data) // insert between Two or More nodes
         {
-            while (this.head != null)  //till head is not equal to null
+            Console.WriteLine("\n AfterInsert element is:");
+            prevNode = this.head;
+            if (prevNode.next.next == null)
             {
-                if (this.head.data == data) //actual matching node of data into given data
-                {
-                    return this.head;
-                }
-                this.head = this.head.next; //increment head pointer 
+                Console.WriteLine("\n Given previoues node is null..");
+                return;
             }
-            return null;
+            Node new_node8 = new Node(data);  //here create new_node4 allocate memory here and assinged the data
+            new_node8.next = prevNode.next.next;  // prevNode next to next assigned to the new_node4 next
+            prevNode.next.next = new_node8; //   prevNode of next is new node
         }
         internal void DisplayAllEle() //display the data of linkedlist
         {
