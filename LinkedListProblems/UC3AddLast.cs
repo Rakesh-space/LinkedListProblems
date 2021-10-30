@@ -6,15 +6,26 @@ using System.Threading.Tasks;
 
 namespace LinkedListProblems
 {
-    class UC1CreateLinkedList
+    class UC3AddLast
     {
 
         internal Node head;
-        internal void AddFirst(int data) //Adding element in begining
+        internal void AddLast(int data) //Appending in last ..
         {
-            Node new_node1 = new Node(data); //here create new_node1 allocate memory here and assinged the data
-            new_node1.next = this.head;
-            this.head = new_node1;
+            Node new_node2 = new Node(data);  //here create new_node2 allocate memory here and assinged the data
+            if (this.head == null)   //checking the head is null or not
+            {
+                this.head = new_node2; //assigned the new_node2 to head
+            }
+            else
+            {
+                Node temp = this.head;   //here Node type temp variable created
+                while (temp.next != null)  //check the temp.next till not null then addLast node
+                {
+                    temp = temp.next;      //increment node
+                }
+                temp.next = new_node2; //new_node2 assgined to the temp->next
+            }
         }
         internal void DisplayAllEle() //display the data of linkedlist
         {
