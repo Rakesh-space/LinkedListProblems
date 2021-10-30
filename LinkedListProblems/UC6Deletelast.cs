@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LinkedListProblems
 {
-    class UC5DeleteFirst
+    class UC6Deletelast
     {
-        internal Node head;
 
+        internal Node head;
         internal void insert(int data) //inserting new integer data into linklist
         {
             Node new_node = new Node(data); //here create new_node allocate memory here and assinged the data
@@ -29,17 +29,24 @@ namespace LinkedListProblems
             Console.WriteLine("\n {0} Data is inserted into linked list.", new_node.data);
         }
 
-
-        internal Node RemoveFirst()  //Removing first element in given linklist
+        internal Node RemoveLast() //removing last element in given linklist
         {
-            if (this.head == null)
+            if (this.head == null) //check the head is null or not
             {
                 return null;
             }
-            this.head = this.head.next; //head is shift to the next node
-            return this.head;
+            if (this.head.next == null) //check the head->next is null or not
+            {
+                return null;
+            }
+            Node newNode6 = this.head;  //here Node type of newNode6 is created
+            while (newNode6.next.next != null)  //check the till last node is null
+            {
+                newNode6 = newNode6.next; //increment in newNode6
+            }
+            newNode6.next = null; //then last secound node is break the last element int given linklist
+            return head;
         }
-
         internal void DisplayAllEle() //display the data of linkedlist
         {
             Console.WriteLine("\nDisplay LinkedList element is:");
