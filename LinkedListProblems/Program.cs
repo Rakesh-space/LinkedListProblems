@@ -6,15 +6,15 @@ namespace LinkedListProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n UC5LinkedListProblem..");
-            UC6Deletelast mylist5 = new UC6Deletelast();
+            Console.WriteLine("\n UC7LinkedListProblem..");
+            UC7SearchOperation mylist7 = new UC7SearchOperation();
             Console.WriteLine("\n insertAfter Operation Performed here:");
-            mylist5.insert(56);
-            mylist5.insert(30);
-            mylist5.insert(70);
-            mylist5.RemoveLast();
-            mylist5.DisplayAllEle();
-           
+            mylist7.insert(56);
+            mylist7.insert(30);
+            mylist7.insert(70);
+            mylist7.DisplayAllEle();
+            mylist7.Search(30);
+            mylist7.DisplayAllEle();
         }
     }
 }
