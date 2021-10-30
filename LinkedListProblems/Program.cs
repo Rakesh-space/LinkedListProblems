@@ -6,14 +6,14 @@ namespace LinkedListProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n UC3LinkedListProblem..");
-            UC3AddLast mylist3 = new UC3AddLast();
-            Console.WriteLine("\n AddLast Operation Performed here:");
-            mylist3.AddLast(56);
-            mylist3.AddLast(30);
-            mylist3.AddLast(70);
-            mylist3.DisplayAllEle();
-          
+            Console.WriteLine("\n UC4LinkedListProblem..");
+            UC4InsertBetween mylist4 = new UC4InsertBetween();
+            Console.WriteLine("\n insertAfter Operation Performed here:");
+            mylist4.insert(56);
+            mylist4.insert(70);
+            mylist4.insertAfter(mylist4.head.next, 30);
+            mylist4.DisplayAllEle();
+
         }
     }
 }
