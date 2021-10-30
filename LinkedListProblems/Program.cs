@@ -6,13 +6,13 @@ namespace LinkedListProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n UC1LinkedListProblem..");
-            UC1CreateLinkedList mylist = new UC1CreateLinkedList();
-            mylist.insert(56);
-            mylist.insert(30);
-            mylist.insert(70);
-            mylist.insert(90);
-            mylist.DisplayAllEle();
+            Console.WriteLine("\n UC2LinkedListProblem..");
+            UC2AddFirst mylist2 = new UC2AddFirst();
+            Console.WriteLine("\n AddFirst Operation Performed here:");
+            mylist2.AddFirst(56);
+            mylist2.AddFirst(30);
+            mylist2.AddFirst(70);
+            mylist2.DisplayAllEle();
         }
     }
 }
