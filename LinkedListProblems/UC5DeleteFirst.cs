@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LinkedListProblems
 {
-    class UC4InsertBetween
+    class UC5DeleteFirst
     {
-
         internal Node head;
+
         internal void insert(int data) //inserting new integer data into linklist
         {
             Node new_node = new Node(data); //here create new_node allocate memory here and assinged the data
@@ -28,19 +28,18 @@ namespace LinkedListProblems
             }
             Console.WriteLine("\n {0} Data is inserted into linked list.", new_node.data);
         }
-        internal void insertAfter(Node prevNode, int data) // insert between Two or More nodes
+
+
+        internal Node RemoveFirst()  //Removing first element in given linklist
         {
-            Console.WriteLine("\n AfterInsert element is:");
-            prevNode = this.head;
-            if (prevNode == null)
+            if (this.head == null)
             {
-                Console.WriteLine("\n Given previoues node is null..");
-                return;
+                return null;
             }
-            Node new_node4 = new Node(data);  //here create new_node4 allocate memory here and assinged the data
-            new_node4.next = prevNode.next;  // prevNode next assigned to the new_node4 next
-            prevNode.next = new_node4; //   prevNode of next is new node
+            this.head = this.head.next; //head is shift to the next node
+            return this.head;
         }
+
         internal void DisplayAllEle() //display the data of linkedlist
         {
             Console.WriteLine("\nDisplay LinkedList element is:");
@@ -60,4 +59,5 @@ namespace LinkedListProblems
                 //  Console.WriteLine(" " + temp.data + " ");
             }
         }
+    }
 }
